@@ -21,7 +21,7 @@ const getTickets = asyncHandler(async (req, res) => {
   res.status(200).json(tickets);
 });
 
-//@desc     Get user tickets
+//@desc     Get user ticket
 //@route    GET  /api/tickets/:id
 //@access   Private
 const getTicket = asyncHandler(async (req, res) => {
