@@ -11,6 +11,7 @@ import { getTicket, closeTicket } from "../features/tickets/ticketSlice";
 import {
   getNotes,
   createNote,
+  // eslint-disable-next-line no-unused-vars
   reset as notesReset,
 } from "../features/notes/noteSlice";
 
@@ -32,7 +33,7 @@ Modal.setAppElement("#root");
 function Ticket() {
   const [modalIsOpen, setModalIsOpen] = useState(false);
   const [noteText, setNoteText] = useState("");
-  const { ticket, isLoading, isError, isSuccess, message } = useSelector(
+  const { ticket, isLoading, isError, message } = useSelector(
     (state) => state.tickets
   );
 
@@ -40,6 +41,7 @@ function Ticket() {
     (state) => state.notes
   );
 
+  // eslint-disable-next-line no-unused-vars
   const params = useParams();
   const navigate = useNavigate();
   const dispatch = useDispatch();
